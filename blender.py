@@ -3,7 +3,7 @@ from PIL import Image
 from random import randint
 import numpy as np
 
-y0=100 #Distance observateur/premiere couche de l'image (cm)
+y0=10 #Distance observateur/premiere couche de l'image (cm)
 #image="visage.png"  #image a dessiner
 #image="cercle_barre.png"  #image a dessiner
 #image="trait_horizontal.png"  #image a dessiner
@@ -58,7 +58,7 @@ for x0 in range(0,size_x):
 
 
 print('a=',a)
-#print(size)
+print(size)
 for i in range (1,size+1):
 	file_out.write(str((a[i])[0])+','+str((a[i])[1])+','+str((a[i])[2])+','+str((a[i])[3])+'\n')
 file_out.close
@@ -67,8 +67,8 @@ file_out.close
 #~ 
 #~ script blender :
 #~ import csv
-#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes_trait.csv"))
-#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes_trait.csv"))
+#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes.csv"))
+#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_spheres.csv"))
 #~ for line in file:
   #  bpy.ops.mesh.primitive_uv_sphere_add(size=float(line[3])/2,location=(float(line[0]),float(line[1]),float(line[2])))
 
@@ -80,10 +80,14 @@ file_out.close
 #~ 
 #~ script blender :
 #~ import csv
-#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes_trait.csv"))
-#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes_trait.csv"))
+#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_cubes.csv"))
+#file=csv.reader(open("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\list_spheres.csv"))
 #~ for line in file:
-  #  bpy.ops.mesh.primitive_uv_sphere_add(size=float(line[3])/20.,location=(float(line[0])/10.,float(line[2])/10.,float(line[3])/20.))
+  #  bpy.ops.mesh.primitive_uv_sphere_add(size=float(line[3])/2.,location=(float(line[0]),float(line[2]),float(line[3])/2.))
 
-	#~ bpy.ops.mesh.primitive_cube_add(radius=float(line[3])/2,location=(float(line[0]),float(line[1]),float(line[2])))
+	#~ bpy.ops.mesh.primitive_cube_add(radius=float(line[3])/2.,location=(float(line[0]),float(line[1]),float(line[2])))
 #~ 
+#    bpy.ops.object.select_all(action='SELECT')
+ #   fPath = str(("C:\\Users\\pabre\\Desktop\\Documents\\question_de_point_de_vue\\spheres.stl"))
+  #  bpy.ops.export_mesh.stl(filepath=fPath)
+    
